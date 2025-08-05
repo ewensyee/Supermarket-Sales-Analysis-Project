@@ -1,4 +1,4 @@
-# Supermarket-Sales-Analysis-Project
+# Supermarket Sales Analysis Project
 
 ## Project Overview
 
