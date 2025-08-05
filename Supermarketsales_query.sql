@@ -117,19 +117,6 @@ FROM sales
 GROUP BY product_line
 ORDER BY total_revenue DESC;
 
-SELECT 
-    product_line,
-    SUM(total) AS revenue
-FROM sales
-GROUP BY product_line
-HAVING SUM(total) >= (
-    SELECT SUM(total)
-    FROM sales
-    GROUP BY product_line
-    ORDER BY SUM(total) DESC
-    LIMIT 1 OFFSET 2  -- 3rd highest revenue
-);
-
 -- which city has the highest average tax percentage
 SELECT city, AVG(tax_pct) as Avg_Tax
 FROM sales
