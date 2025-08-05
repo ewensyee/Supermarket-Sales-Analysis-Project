@@ -104,6 +104,7 @@ FROM sales
 GROUP BY customer_type
 ORDER BY tax DESC;
 
+-- Which product line performs the best based on the quantity sold and revenue, and how do they compare to the average sales performance?
 SELECT 
     product_line,
     SUM(quantity) AS total_quantity,
